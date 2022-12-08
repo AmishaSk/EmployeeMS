@@ -5,7 +5,6 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import com.employee.entity.Employee;
 @Repository
 @EnableJpaRepositories
-
 public interface EmployeeRepository extends JpaRepository<Employee, Long>  {
 
 }
