@@ -8,6 +8,4 @@ import com.employee.entity.Employee;
 
 public interface EmployeeRepository extends JpaRepository<Employee, Long>  {
 
-	//void save(long id);
-
 }
