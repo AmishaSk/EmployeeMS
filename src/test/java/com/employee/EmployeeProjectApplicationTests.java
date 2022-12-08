@@ -31,10 +31,7 @@ class EmployeeProjectApplicationTests {
 	public void whenSaveEmployee(){
 		Employee employee= new Employee(987,"Dharani","Pokuri",31,765);
 		given(employeeRepository.save(employee)).willReturn(employee);
-		System.out.println(employeeRepository);
-		System.out.println(employeeService);
 		String savedEmployeeDetails=employeeService.saveEmployeeDetails(employee);
-		System.out.println(savedEmployeeDetails);
 		assertThat(savedEmployeeDetails).isNotNull();
 	}
 	
@@ -42,9 +39,6 @@ class EmployeeProjectApplicationTests {
 	@Test
 	public void whenSaveEmployeeExc() {
 		given(employeeRepository.save(employee)).willReturn(employee);
-		System.out.println(employeeRepository);
-		System.out.println(employeeService);
-		
 		org.junit.jupiter.api.Assertions.assertThrows(RuntimeException.class, () ->{
 			employeeService.saveEmployeeDetails(employee);
 		});
@@ -76,9 +70,7 @@ class EmployeeProjectApplicationTests {
     	given(employeeRepository.save(employee)).willReturn(employee);
     	employee.setAge(30);
     	employee.setFirstName("Hema");
-    	
     	Employee updatedEmployee=employeeService.addEmp(employee);
-    	
     	assertThat(updatedEmployee.getAge()).isEqualTo(30);
     	assertThat(updatedEmployee.getFirstName()).isEqualTo("Hema");
     }
