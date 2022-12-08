@@ -1,8 +1,6 @@
 package com.employee.controller;
 import java.util.List;
-
 import javax.servlet.http.HttpSession; 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,11 +14,9 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestBody;
 import com.employee.entity.Employee;
 import com.employee.service.EmployeeService;
-
 @RestController
 @RequestMapping("/employee")
 public class EmployeeController {
-
 	@Autowired
 	EmployeeService employeeService;
 	@PostMapping("save")
