@@ -5,11 +5,6 @@ import javax.persistence.Entity;
 //import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import lombok.*;
-
-@Setter
-@Getter
-@Builder
 
 
 @Entity
@@ -40,10 +35,6 @@ public class Employee {
 		this.age=age;
 		this.salary=salary;
 	}
-	
-	
-	
-	
 	
 	public long getEmpid() {
 		return empid;
@@ -80,8 +71,5 @@ public class Employee {
 		return "Employee [empid=" + empid + ", firstName=" + firstName + ", lastName=" + lastName + ", age=" + age
 				+ ", salary=" + salary + "]";
 	}
-	
-	
-	
 	
 }
