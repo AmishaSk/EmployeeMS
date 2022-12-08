@@ -1,5 +1,4 @@
 package com.employee;
-
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -7,19 +6,14 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.boot.test.context.SpringBootTest;
-
 import com.employee.entity.Employee;
 import com.employee.repository.EmployeeRepository;
 import com.employee.service.EmployeeServiceImpl;
-
 import static org.mockito.BDDMockito.given;
 import static org.mockito.BDDMockito.willDoNothing;
 import static org.mockito.Mockito.*;
-
 import java.util.List;
-
 import static org.assertj.core.api.Assertions.assertThat;
-
 @SpringBootTest
 @ExtendWith(MockitoExtension.class)
 class EmployeeProjectApplicationTests {
@@ -73,9 +67,7 @@ class EmployeeProjectApplicationTests {
 		org.junit.jupiter.api.Assertions.assertThrows(RuntimeException.class, () ->{
 			employeeService.getEmployeeDetails();
 		});
-		
 	}
-	
 	
     @DisplayName("Testing for update method")
     @Test
