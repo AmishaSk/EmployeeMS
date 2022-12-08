@@ -22,9 +22,6 @@ public class EmployeeController {
 	@PostMapping("save")
 	public ResponseEntity<String> addEmploye(@RequestBody Employee employee) {
 		String response = employeeService.saveEmployeeDetails(employee);
-		if(response == null || response.isEmpty()) {
-			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Data not saved");
-		}
 		return ResponseEntity.status(HttpStatus.CREATED).body(response);
 	}
 	
