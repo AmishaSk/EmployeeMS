@@ -1,12 +1,8 @@
 package com.employee.entity;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-//import javax.persistence.GeneratedValue;
-//import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
-
 @Entity
 @Table(name = "employee_details2")
 public class Employee {
@@ -21,13 +17,10 @@ public class Employee {
 	private int age;
 	@Column(name="salary")
 	private double salary;
-	
-	
 	public Employee() {
 		
 	}
 	public Employee(long empid, String firstName, String lastName, int age, double salary) {
-		// TODO Auto-generated constructor stub
 		super();
 		this.empid=empid;
 		this.firstName=firstName;
